@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- BS css -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- BS icon -->
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Homework-8</title>
+</head>
+<body>
+    <header class="bg-primary header">
+        <div class="container">
+            <div class="box d-flex justify-content-between p-3">
+                <input type="text" name="" id="submit_text" placeholder="Enter your data" class="rounded-3 border-0 p-2 w-50">
+                <button type="submit" id="submit_btn" class="btn btn-light w-25">Add</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="modals">
+        <div class="container">
+            <div class="modal_wrap">
+                <button class="btn btn-danger exit"><i class="bi bi-x-lg"></i></button>
+                <h2 class="">O'zgartirish uchun kiriting</h2>
+                <div class="modal-box d-flex justify-content-evenly">
+                    <input type="text" name="" id="modal-text" placeholder="Enter text">
+                    <button class="btn btn-primary modal-btn">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modals2">
+        <div class="container">
+            <div class="modal_wrap2">
+                <button class="btn btn-secondary exit2"><i class="bi bi-x-lg"></i></button>
+                <h2 class="fs-1">Please Fill !!!</h2>
+            </div>
+        </div>
+    </div>
+    <main class="position-relative pb-5">
+        <div class="container">
+            <table class="table table-hover  text-center my-3 fs-4 fw-bolder tables border">
+                <thead class="bg-info text-light">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>id</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="text-info" id="table_body">
+                    <!-- <tr>
+                        <td>Ibrohim</td>
+                        <td>id</td>
+                        <td><button class="btn btn-outline-success fs-5 fw-semibold">Edit</button></td>
+                        <td><button class="btn btn-outline-danger fs-5 fw-semibold">Delete</button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+
+    
+    <footer class="bg-primary footer">
+        <div class="container">
+            <div class="box d-flex justify-content-between p-3">
+                <h2 class="text-light">Data</h2>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="/script/plugin.js"></script>
+<script src="/script/script.js"></script>
+</html>

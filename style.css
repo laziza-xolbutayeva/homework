@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.tables{
+    margin-bottom: 70px;
+}
+.modals{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.74);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.modal_wrap{
+    height: 250px;
+    padding: 40px 0 0 0;
+    margin: auto;
+    background-color: rgb(0, 109, 0);
+    position: relative;
+    top: 200px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+}
+.exit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px;
+}
+.modal-box{
+    padding: 20px;
+}
+#modal-text{
+    width: 50%;
+    height: 50px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+}
+.modal-btn{
+    height: 50px;
+    padding: 5px 15px;
+    width: 150px;
+}
+
+.modals2{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.74);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.modal_wrap2{
+    height: 200px;
+    padding: 45px 0 0 0;
+    margin: auto;
+    background-color:rgb(206, 0, 0);
+    position: relative;
+    top: 200px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+}
+.exit2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+}
