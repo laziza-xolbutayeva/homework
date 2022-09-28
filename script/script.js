@@ -1,6 +1,8 @@
 'use strict'
 
 const   baseURL="http://localhost:3000/";
+$(".modals2").style.display="none";
+$(".modals").style.display="none";
 
 async function getUser(){
     try {
@@ -15,15 +17,13 @@ async function getUser(){
         console.log(result);
     } catch (error) {
         console.log(error);
-    }
-    
-
-    
+    }  
 }
 
 getUser();
 
 function renderData(data){
+    $('#table_body').innerHTML="";
     data.forEach((item,i) => {
         const tr=createElements('tr','tr',`
         <th class="bg-info text-light">${i+1}</th>
@@ -52,11 +52,11 @@ async function addUser(userName){
     }
 }
 
-$(".modals2").style.display="none";
 
 $("#submit_btn").addEventListener("click",()=>{
     if($("#submit_text").value.trim().length!==0){
         addUser($("#submit_text").value);
+        getUser();
     }
     else{
         $(".modals2").style.display="block";
@@ -80,13 +80,12 @@ async function deleteUser(id){
     }
 }
 
-$(".modals").style.display="none";
 
 $("#table_body").addEventListener("click",(e)=>{
     if(e.target.classList.contains('delete_btn')){
-        deleteUser(e.target.getAttribute('data-del'))
+        deleteUser(e.target.getAttribute('data-del'));
+        getUser();
     }else if(e.target.classList.contains('edit_btn')){
-        
         $(".modals").style.display="block";
         $(".modal-btn").addEventListener("click",()=>{
             if($("#modal-text").value.trim().length!==0){
@@ -99,7 +98,8 @@ $("#table_body").addEventListener("click",(e)=>{
         })
         $(".exit").addEventListener("click",()=>{
             $(".modals").style.display="none";
-        })
+        });
+        getUser();
     }
 })
 
